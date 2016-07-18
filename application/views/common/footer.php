@@ -52,7 +52,7 @@ var woocommerce_params = {"countries":"{\"AF\":[],\"AT\":[],\"BE\":[],\"BI\":[],
 <script type="text/javascript" src="<?php echo base_url("assets/js/cart-fragments.min.js") ?>"></script>
 <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.twitterFetcher.js") ?>"></script>
 	
-<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="images/saved_resource.html"></iframe>
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="<?php echo base_url("assets/images/saved_resource.html") ?>"></iframe>
 
 
 
