@@ -531,7 +531,7 @@ p > .button:first-child {
 	margin:-2px 8px 0 0;
 	width:16px;
 	height:16px;
-	background:url(../images/button_icons.png) 0 0 no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/icons/button_icons.png) 0 0 no-repeat;
 	vertical-align:middle;
 }
 
@@ -601,7 +601,7 @@ p > .button:first-child {
 	margin-top:5px;
 	width:20px;
 	height:20px;
-	background:url(images/loader.gif) 0 0 no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/loader.gif) 0 0 no-repeat;
 }
 
 .form-submit {
@@ -624,7 +624,7 @@ p > .button:first-child {
 	display:inline-block;
 	margin:-3em 0 0 0;
 	padding:1em 20px;
-	background:url(images/bgs/black_80_bg.png);
+	background:url(../Academy – Learning Management Theme_files/images/bgs/black_80_bg.png);
 	color:#fff;	
 }
 
@@ -672,7 +672,7 @@ p > .button:first-child {
 	bottom:0;
 	left:0;
 	padding:1em 15px;
-	background:url(images/bgs/white_80_bg.png);
+	background:url(../Academy – Learning Management Theme_files/images/bgs/white_80_bg.png);
 }
 
 .gallery-item .gallery-caption {
@@ -757,7 +757,7 @@ ul.bordered  li:last-child {
 ul.checked li {
 	margin-bottom:0.5em;
 	padding-left:16px;
-	background:url(images/bullet_1.png) 0 6px no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/bullet_1.png) 0 6px no-repeat;
 }
 
 ul.checked,
@@ -839,11 +839,11 @@ ul.error {
 ul.success li,
 ul.error li {
 	padding-left:13px;
-	background:url(images/bullet_4.png) 0 0.6em no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/bullet_4.png) 0 0.6em no-repeat;
 }
 
 ul.success li {
-	background-image:url(images/bullet_5.png);
+	background-image:url(../Academy – Learning Management Theme_files/images/bullet_5.png);
 }
 
 /*-------------------------------Player---------------------------*/
@@ -894,7 +894,7 @@ ul.success li {
 	width:34px;
 	height:34px;
 	border:1px solid rgba(0,0,0,0.2);
-	background:#3d4e5b url(images/icons/player_icons.png) -25px 4px no-repeat;	
+	background:#3d4e5b url(../Academy – Learning Management Theme_files/images/icons/player_icons.png) -25px 4px no-repeat;	
 	text-indent:-9999px;
 }
 
@@ -933,7 +933,7 @@ ul.success li {
 	overflow:hidden;
 	height:5px;
 	border-bottom:1px solid rgba(255,255,255,0.15);
-	background:url(../images/black_20_bg.png);
+	background:url(../Academy – Learning Management Theme_files/images/bgs/black_20_bg.png);
 }
 
 .jp-seek-bar {
@@ -975,7 +975,7 @@ ul.success li {
 	margin:-5px 0 -3px 0;
 	width:16px;
 	height:16px;
-	background:url(images/icons/player_icons.png) -73px -5px no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/icons/player_icons.png) -73px -5px no-repeat;
 	text-indent:-9999px;
 }
 
@@ -990,7 +990,7 @@ ul.success li {
 	width:72px;
 	height:5px;
 	border-bottom:1px solid rgba(255,255,255,0.15);
-	background: url(../images/black_20_bg.png);
+	background: url(../Academy – Learning Management Theme_files/images/bgs/black_20_bg.png);
 	cursor: pointer;
 }
 
@@ -1026,7 +1026,7 @@ ul.success li {
 	margin-left:-25px;
 	width: 50px;
 	height: 50px;
-	background: #3d4e5b url(images/icons/player_icons.png) -128px 12px no-repeat;
+	background: #3d4e5b url(../Academy – Learning Management Theme_files/images/icons/player_icons.png) -128px 12px no-repeat;
 }
 
 .jp-video-play-icon:before {
@@ -1081,7 +1081,7 @@ ul.success li {
 	overflow:hidden;
 	width: 15px;
 	height: 16px;
-	background: url(images/icons/player_icons.png) -184px -4px no-repeat;
+	background: url(../Academy – Learning Management Theme_files/images/icons/player_icons.png) -184px -4px no-repeat;
 }
 
 .jp-restore-screen {
@@ -1329,7 +1329,7 @@ ul.success li {
 	display:block;
 	width:24px;
 	height:24px;
-	background:#5ea5d7 url(images/icons/toggle_icons.png) 7px 6px no-repeat;
+	background:#5ea5d7 url(../Academy – Learning Management Theme_files/images/icons/toggle_icons.png) 7px 6px no-repeat;
 	color:#fff;
 	content:" ";
 	text-align:center;
@@ -1526,7 +1526,7 @@ ul.success li {
 
 .header-navigation div > ul > li.current-menu-item > a {
 	border-bottom:1px solid rgba(255,255,255,0.2);
-	background:url(../images/black_20_bg.png);
+	background:url(../Academy – Learning Management Theme_files/images/bgs/black_20_bg.png);
 }
 
 .header-navigation ul ul {
@@ -1768,7 +1768,7 @@ ul.success li {
 	margin:0 0 7px 7px;
 	width:20px;
 	height:20px;
-	background:#f0f0f0 url(../images/user_social_icons.png) 0 0 no-repeat;
+	background:#f0f0f0 url(../Academy – Learning Management Theme_files/images/icons/user_social_icons.png) 0 0 no-repeat;
 }
 
 .user-links a.twitter { background-position: -24px 0; } 
@@ -2029,7 +2029,7 @@ ul.success li {
 
 .course-preview .course-footer .course-users {
 	padding-left:17px;
-	background:url(../images/user_icon.png) 0 0.2em no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/icons/user_icon.png) 0 0.2em no-repeat;
 	color:#777;
 	text-shadow:0 1px 0 #fff;	
 }
@@ -2115,7 +2115,7 @@ ul.success li {
 	float:left;
 	width:0;
 	height:8px;
-	background:#5ea5d7 url(images/bgs/progress_bg.png) 0 0 repeat-x;
+	background:#5ea5d7 url(../Academy – Learning Management Theme_files/images/bgs/progress_bg.png) 0 0 repeat-x;
 }
 
 .course-status {
@@ -2298,7 +2298,7 @@ ul.success li {
 	margin:0 15px 15px 0;
 	width:26px;
 	height:26px;
-	background:#f3715d url(images/icons/attachment_icons.png) 1px 1px no-repeat;
+	background:#f3715d url(../Academy – Learning Management Theme_files/images/icons/attachment_icons.png) 1px 1px no-repeat;
 }
 
 .lesson-child .lesson-attachments a {
@@ -2497,11 +2497,11 @@ p + .quiz-listing {
 
 .quiz-listing li.success,
 .quiz-listing li.error {
-	background:url(images/bullet_5.png) 16px 0.6em no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/bullet_5.png) 16px 0.6em no-repeat;
 }
 
 .quiz-listing li.error {
-	background-image:url(images/bullet_4.png);
+	background-image:url(../Academy – Learning Management Theme_files/images/bullet_4.png);
 }
 
 .quiz-listing .string li.success,
@@ -2744,7 +2744,7 @@ p + .quiz-listing {
 	margin:6px 8px 0 0;	
 	width:21px;
 	height:20px;	
-	background:url(images/icons/comments_icon.png) 0 0 no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/icons/comments_icon.png) 0 0 no-repeat;
 	color:#777;
 	text-align:center;
 	text-shadow:0 1px 0 #fff;
@@ -2767,7 +2767,7 @@ p + .quiz-listing {
 	margin:0 0 8px 8px;
 	padding:0 15px 0 5px;
 	border-left:1px solid rgba(0,0,0,0.05);	
-	background:url(images/bgs/tag_bg.png) right 0 no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/bgs/tag_bg.png) right 0 no-repeat;
 	color:#999;
 	text-shadow:0 1px 0 #F5F5F5;
 	font-size:0.9em!important;
@@ -2851,7 +2851,7 @@ p + .quiz-listing {
 .comment-reply-link {
 	float:left;
 	padding-left:20px;
-	background:url(images/icons/reply_icon.png) 0 0.35em no-repeat;
+	background:url(../Academy – Learning Management Theme_files/images/icons/reply_icon.png) 0 0.35em no-repeat;
 	color:#777;
 }
 
@@ -2895,7 +2895,7 @@ p + .quiz-listing {
 .pagination a.next,
 .pagination a.prev {
 	width:7px;
-	background-image:url(images/pagination_arrows.png);
+	background-image:url(../Academy – Learning Management Theme_files/images/pagination_arrows.png);
 	background-position:0px 6px;
 	background-repeat:no-repeat;
 	color:transparent;
@@ -2944,7 +2944,7 @@ p + .quiz-listing {
 	margin-top:-12px;	
 	width:13px;
 	height:23px;
-	background:url(../images/main_slider_arrows.png) -13px 0 no-repeat;
+	background: url(../images/main_slider_arrows.png) -13px 0 no-repeat;
 	cursor:pointer;
 }
 
@@ -3020,7 +3020,7 @@ p + .quiz-listing {
 	bottom:0;
 	left:0;	
 	padding:1.5em 20px;
-	background:url(images/bgs/white_80_bg.png);
+	background:url(../Academy – Learning Management Theme_files/images/bgs/white_80_bg.png);
 }
 
 .boxed-slider .embedded-video {
@@ -3186,7 +3186,7 @@ p + .quiz-listing {
 	display:block;
 	width:16px;
 	height:16px;
-	background:#bbb url(images/bullet_6.png) center 4px no-repeat;
+	background:#bbb url(../Academy – Learning Management Theme_files/images/bullet_6.png) center 4px no-repeat;
 	content:" ";
 }
 
