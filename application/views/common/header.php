@@ -13,9 +13,9 @@
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-migrate.min.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/comment-reply.min.js") ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.hoverIntent.min.js") ?>"></script>
+    <!-- <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.hoverIntent.min.js") ?>"></script> -->
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.placeholder.min.js") ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.jplayer.min.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.jplayer.min.js") ?>"></script> 
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.themexSlider.js") ?>"></script>
     <script type="text/javascript">
       /* <![CDATA[ */
@@ -124,7 +124,7 @@
                 <span class="button-icon register"></span>My Profile</a>                            
               </div>
               <div class="button-wrap left">
-                <a href="register.html" class="button">
+                <a href="<?php echo site_url('Register/'); ?>" class="button">
                 <span class="button-icon register"></span>Register                              </a>
               </div>
             </div>
