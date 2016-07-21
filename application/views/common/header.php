@@ -13,7 +13,7 @@
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-migrate.min.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/comment-reply.min.js") ?>"></script>
-    <!-- <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.hoverIntent.min.js") ?>"></script> -->
+    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.hoverIntent.min.js") ?>"></script> 
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.placeholder.min.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.jplayer.min.js") ?>"></script> 
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.themexSlider.js") ?>"></script>
