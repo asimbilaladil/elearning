@@ -41,6 +41,7 @@ class Register extends CI_Controller {
             );
 
             $this->User->insert( $data );
+            redirect('Register/');
 
         }
 
