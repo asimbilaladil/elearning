@@ -11,6 +11,7 @@
 	 <?php echo form_open('form'); ?>
 
         <div class="message"></div>
+                
         <div class="sixcol column">
           <div class="field-wrapper">
             <input type="text" name="username" placeholder="Username" value="<?php echo set_value('username'); ?>" required>
@@ -35,8 +36,8 @@
         <div class="clear"></div>
         <button type="submit" class="button submit-button left">Register</button>
         <div class="form-loader"></div>
+<?php echo validation_errors(); ?>
 
-        <?php echo validation_errors(); ?>
         <?php echo form_close(); ?>
       </form>
     </div>

@@ -13,9 +13,9 @@
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-migrate.min.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/comment-reply.min.js") ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.hoverIntent.min.js") ?>"></script> 
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.placeholder.min.js") ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.jplayer.min.js") ?>"></script> 
+
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.themexSlider.js") ?>"></script>
     <script type="text/javascript">
       /* <![CDATA[ */
@@ -177,7 +177,7 @@
             <div class="menu">
               <ul id="menu-main-menu" class="menu">
                 <li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-187">
-                  <a href="index.html">Home</a>
+                  <a href="<?php echo site_url('Home') ?>">Home</a>
                   <ul class="sub-menu">
                     <li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-773"><a href="#">Stretched Slider</a></li>
                     <li id="menu-item-772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-772"><a href="#">Boxed Slider</a></li>

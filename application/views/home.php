@@ -1,3 +1,4 @@
+    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.hoverIntent.min.js") ?>"></script> 
 <!-- banner -->
 <div class="featured-content">
     <div class="substrate">
