@@ -41,6 +41,9 @@
 
         <script type="text/javascript" src="<?php echo base_url(); ?>includes/plugins/formValidation/js/formValidation.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>includes/plugins/formValidation/js/framework/bootstrap.js"></script>
+        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+          <script>tinymce.init({ selector:'textarea' });</script>
+
 
     </head>
     <header class="main-header">

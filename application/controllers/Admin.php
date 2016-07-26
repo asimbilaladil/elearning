@@ -11,7 +11,7 @@ class Admin extends CI_Controller {
     {   
 
         
-        $this->loadView('admin/course', null);
+        $this->loadView('admin/index', null);
 
     }
 
