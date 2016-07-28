@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Course extends CI_Controller {
+class CreateCourse extends CI_Controller {
 
     public function __construct() {
 
@@ -15,9 +15,7 @@ class Course extends CI_Controller {
 
         $data['courses'] = $this->CourseModel->getCourses();
 
-        $this->load->view('common/header');
-        $this->load->view('course', array('data' => $data));
-        $this->load->view('common/footer');
+        $this->loadView('admin/CreateCourse', $data);
 
     }
 
@@ -31,7 +29,22 @@ class Course extends CI_Controller {
 
         $this->CourseModel->insert($data);
 
-        redirect('Course');
+        redirect('CreateCourse');
+
+    }
+
+
+    /**
+     * Load view 
+     * @param 1 : view name
+     * @param 2 : data to be render on view. If no data pass null
+     */
+    function loadView($view, $data) {
+        //error_reporting(0);
+        $this->load->view('admin/common/header');
+        $this->load->view('admin/common/sidebar');
+        $this->load->view($view, array('data' => $data));
+        $this->load->view('admin/common/footer');
 
     }
 

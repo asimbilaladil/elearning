@@ -13,9 +13,11 @@ class CreateQuiz extends CI_Controller {
     
     public function index() {
 
-        $this->load->view('common/header');
-        $this->load->view('create_quiz');
+        //$this->load->view('common/header');
+        //$this->load->view('create_quiz');
         //$this->load->view('common/footer');
+
+        $this->loadView('admin/CreateQuiz', null);
 
     }
 
@@ -43,9 +45,23 @@ class CreateQuiz extends CI_Controller {
             $this->QuizModel->insert($data);
 
         }
-
         
         redirect('CreateQuiz');
+
+    }
+
+
+    /**
+     * Load view 
+     * @param 1 : view name
+     * @param 2 : data to be render on view. If no data pass null
+     */
+    function loadView($view, $data) {
+        //error_reporting(0);
+        $this->load->view('admin/common/header');
+        $this->load->view('admin/common/sidebar');
+        $this->load->view($view, array('data' => $data));
+        $this->load->view('admin/common/footer');
 
     }
 

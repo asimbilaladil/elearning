@@ -13,6 +13,13 @@
                 <a href="<?php echo site_url('createBlog'); ?>"><i class="fa fa-desktop"></i> <span>Create Blog</span></a>                
             </li>
 
+             <li class="treeview">
+                <a href="<?php echo site_url('CreateCourse'); ?>"><i class="fa fa-desktop"></i> <span>Create Course</span></a>                
+            </li>      
+
+             <li class="treeview">
+                <a href="<?php echo site_url('CreateQuiz'); ?>"><i class="fa fa-desktop"></i> <span>Create Quiz</span></a>                
+            </li>        
 
 
 
