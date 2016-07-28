@@ -9,15 +9,15 @@ class CreateQuiz extends CI_Controller {
         $this->load->helper(array('form', 'url'));
 
         $this->load->model('QuizModel');
+        $this->load->model('CourseModel');
+        
     }
     
     public function index() {
+        
+        $data['courses'] = $this->CourseModel->getCourses();
 
-        //$this->load->view('common/header');
-        //$this->load->view('create_quiz');
-        //$this->load->view('common/footer');
-
-        $this->loadView('admin/CreateQuiz', null);
+        $this->loadView('admin/CreateQuiz', $data);
 
     }
 
@@ -36,6 +36,8 @@ class CreateQuiz extends CI_Controller {
             $data['question'] = $question;
 
             $data['answer'] = $this->input->post('answer' . $i, true);
+
+            $data['course_id'] = $this->input->post('course', true);
 
             for ( $j = 0; $j < count($options) ; $j++ ) {  
                 
