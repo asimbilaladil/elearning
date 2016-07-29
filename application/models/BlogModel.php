@@ -26,6 +26,16 @@ class BlogModel extends CI_Model {
         return $result;         
     }
 
+    public function getBlogById($id) {
+
+        $this->db->select('*');
+        $this->db->from('blog');
+        $this->db->where('id', $id);
+        $quary_result=$this->db->get();
+        $result=$quary_result->result();
+        return $result;
+    }
+    
     public function update() {
 
     }

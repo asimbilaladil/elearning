@@ -24,7 +24,7 @@ class CreateBlog extends CI_Controller {
         $data = array(
             'title' => $this->input->post('title', true),
             'content' => $this->input->post('content', true),
-            'date' => date("Y/m/d")
+            'date' => date("F j, Y")
         );
 
         $this->BlogModel->insert( $data );
