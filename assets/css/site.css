@@ -2744,7 +2744,7 @@ p + .quiz-listing {
 	margin:6px 8px 0 0;	
 	width:21px;
 	height:20px;	
-	background:url(../Academy – Learning Management Theme_files/images/icons/comments_icon.png) 0 0 no-repeat;
+	background:url(../images/icons/comments_icon.png) 0 0 no-repeat;
 	color:#777;
 	text-align:center;
 	text-shadow:0 1px 0 #fff;
@@ -2767,7 +2767,7 @@ p + .quiz-listing {
 	margin:0 0 8px 8px;
 	padding:0 15px 0 5px;
 	border-left:1px solid rgba(0,0,0,0.05);	
-	background:url(../Academy – Learning Management Theme_files/images/bgs/tag_bg.png) right 0 no-repeat;
+	background:url(../images/bgs/tag_bg.png) right 0 no-repeat;
 	color:#999;
 	text-shadow:0 1px 0 #F5F5F5;
 	font-size:0.9em!important;
@@ -2851,7 +2851,7 @@ p + .quiz-listing {
 .comment-reply-link {
 	float:left;
 	padding-left:20px;
-	background:url(../Academy – Learning Management Theme_files/images/icons/reply_icon.png) 0 0.35em no-repeat;
+	background:url(../images/icons/reply_icon.png) 0 0.35em no-repeat;
 	color:#777;
 }
 
