@@ -23,11 +23,10 @@ class Course extends CI_Controller {
 
     public function save() {
 
-        print_r($this->input->post());
-
         $data = array(
             'name' => $this->input->post('name', true),
-            'description' => $this->input->post('description', true)
+            'description' => $this->input->post('description', true),
+            'url' => $this->input->post('url', true)
         );
 
         $this->CourseModel->insert($data);
@@ -35,7 +34,5 @@ class Course extends CI_Controller {
         redirect('Course');
 
     }
-
-
 
 }
