@@ -71,5 +71,15 @@ class Register extends CI_Controller {
         }
 
     }
+    /**
+     * logout
+     */
+    function logout() {
+
+        $this->session->sess_destroy();
+
+        redirect('Home/');
+
+    }    
 
 }

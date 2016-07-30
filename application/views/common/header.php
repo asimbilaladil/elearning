@@ -70,10 +70,11 @@
           </div>
           <!-- /logo -->
           <div class="header-options right clearfix">
-          <?php if (isset( $_SESSION )) {?>
+          
             <div class="login-options right">
+            <?php if (isset( $_SESSION['id'] )) {?>
               <div class="button-wrap left">
-                <a href="#" class="button dark">
+                <a href="<?php echo site_url('Register/logout'); ?>" class="button dark">
                 <span class="button-icon logout"></span>Sign Out</a>                            
               </div>
      
