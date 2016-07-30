@@ -275,7 +275,7 @@ margin-right: 10px;
 	font-family: 'Verdana', 'Geneva', sans-serif;
 }
 .learndash .completed, #learndash_profile .completed {
-	background: url(images/completed.png) no-repeat;
+	background: url(../images/completed.png) no-repeat;
 	display: block;
     line-height: 53px;
 	background-position: 97.9% center;
@@ -283,7 +283,7 @@ margin-right: 10px;
 	padding-right: 2%;
 }
 .learndash .notcompleted, #learndash_profile .notcompleted {
-	background: url(images/notcompleted.png) no-repeat;
+	background: url(../images/notcompleted.png) no-repeat;
 	display: block;
     line-height: 53px;
 	background-position: 97.9% center;
