@@ -19,8 +19,13 @@ class Quiz extends CI_Controller {
 
             $quiz = $this->QuizModel->getQuizById($id);
 
+            if( empty($quiz) ) {
+                redirect('home');
+            }
+
             $data['questions'] = $quiz;
-    
+            $data['courseId'] = $id;
+
             $this->load->view('common/header');
             $this->load->view('quiz', array('data' => $data));
             $this->load->view('common/footer');            
@@ -28,6 +33,10 @@ class Quiz extends CI_Controller {
         } else {
             redirect('home');
         }
+
+    }
+
+    public function save() {
 
     }
 }
