@@ -6,6 +6,8 @@
     <title>Academy</title>
     <link rel="stylesheet" href="<?php echo base_url("assets/css/custom.css") ?>" type="text/css" media="all">
     <link rel="stylesheet" id="general-css" href="<?php echo base_url("assets/css/site.css") ?>" type="text/css" media="all">
+    <link rel="stylesheet" id="general-css" href="<?php echo base_url("assets/css/learndash_template_style.css") ?>" type="text/css" media="all"
+    
     <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css") ?>" type="text/css" media="all">
     <script id="facebook-jssdk" src="<?php echo base_url("assets/js/all.js") ?>"></script>
     <script id="twitter-wjs" src="<?php echo base_url("assets/js/widgets.js") ?>"></script>
