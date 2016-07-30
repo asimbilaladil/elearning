@@ -54,7 +54,7 @@ class CourseModel extends CI_Model {
         $query = $this->db->query('SELECT c.name, c.id as courseId, a.id as attempt
                                 FROM courses as c
                                 LEFT JOIN user_attempt_module as a
-                                ON c.id = a.course_id AND a.user_id = ' . $id);
+                                ON c.id = a.course_id AND a.user_id = ' . $id . ' order by c.id  asc');
         
         $query->result();
         return $query->result();
