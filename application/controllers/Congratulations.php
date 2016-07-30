@@ -18,4 +18,12 @@ class Congratulations extends CI_Controller {
         $this->load->view('common/footer');            
 
     }
+
+    public function success() {   
+            
+
+    	redirect("Home/");
+
+    }
+    
 }
