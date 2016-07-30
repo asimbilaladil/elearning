@@ -25,6 +25,7 @@
 
                 <input type="hidden" name="amount" value="20">
                 <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="custom" value="USD">
                 
                 <!-- Specify URLs -->
                 <input type='hidden' name='cancel_return' value='http://example.com/cancel.php'>
