@@ -52,45 +52,83 @@
                                                 <input type="text" name="description" class="form-control" id="" placeholder="Description" required>
                                             </div>
                                             <br><br>
-                                        </div>                                                                               
-                                
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-2">
-
-                                            <button type="submit" class="btn btn-primary btn-block">Save</button>
                                         </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-2">
+
+                                                <button type="submit" class="btn btn-primary btn-block">Save</button>
+                                            </div>
+                                        </div>                                                                               
+          
+
                                     </div>
+                           
 
                             </form>
                         </div>
 
-                            <div class="box-footer">
-                              <table style="width:100%" class=".table-striped">
-                                <tr>
-                                  <th>Name</th>
-                                  <th>Action</th>
-                                </tr>
-                                <?php
-                                  foreach ($data['courses'] as $course) {
-                                  
-                                    echo '<tr>
-                                      <td> '. $course->name .' </td>
-                                      <td> <a href=""> VIEW </a></td>
-                                    </tr>';
-                                  
-                                  }
-                                  ?>
-                              </table>
-
-                            </div>
                         </div>
-
+       
 
                     </div>
                 </div>
                 <!-- /.row (main row) -->
             </section>
             <!-- /.content -->
+            <!-- Main content -->
+            <section class="content">
+                <!-- Main row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+
+                                <div class="box box-success">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Modules</h3>
+                                    </div>
+                                    
+                                    <div class="box-body">
+                                 <table style="width:100%" class="table-striped" >
+              <thead>
+                <tr>
+                  <th style="padding: 15px;" >Name</th>
+                  <th style="padding: 15px;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                         foreach ($data['courses'] as $course) {
+                                  
+                                    echo '<tr>
+                                      <td style="padding: 15px;"> '. $course->name .' </td>
+                                      <td style="padding: 15px;"> <a href=""> VIEW </a></td>
+                                    </tr>';
+                                  
+                                  }
+                  ?>                  
+              </tbody>
+            </table>
+
+
+
+
+                                
+                                                                                                                    
+          
+
+                                    </div>
+                           
+
+
+                        </div>
+
+                        </div>
+       
+
+                    </div>
+                </div>
+                <!-- /.row (main row) -->
+            </section>
+            <!-- /.content -->            
         </div>
     </div>
