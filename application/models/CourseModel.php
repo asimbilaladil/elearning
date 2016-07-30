@@ -25,7 +25,7 @@ class CourseModel extends CI_Model {
         $result = $quary_result->result();
         return $result;         
     }
-
+    
     public function update() {
 
     }

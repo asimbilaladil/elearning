@@ -26,6 +26,16 @@ class QuizModel extends CI_Model {
         return $result;         
     }
 
+    public function getQuizById($id) {
+
+        $this->db->select('*');
+        $this->db->from('quiz');
+        $this->db->where('course_id', $id);
+        $quary_result=$this->db->get();
+        $result=$quary_result->result();
+        return $result;
+    }
+
     public function update() {
 
     }
