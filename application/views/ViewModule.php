@@ -4,7 +4,7 @@
     </div>
     <div class="row">
         <div class="page-title">
-            <h1 class="nomargin">  Name of module</h1>
+            <h1 class="nomargin"> <?php echo $data['course']->name ?> </h1>
         </div>
         <!-- /page title -->                
     </div>
@@ -16,8 +16,7 @@
                 <div class="post-content">
                     <h1>Module I</h1>
                     <div class="learndash user_has_access" id="learndash_post_2443">
-                        <p><iframe src="https://docs.google.com/presentation/d/1E-LbWvgvCA952kLPYkGGFoSv3PLLVhPp7lRg7_fBAy4/embed?start=true&amp;loop=false&amp;delayms=3000" width="700" height="554" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-            
+                        <?php echo $data['course']->url ?>
                         <br>
 
                     </div>
@@ -33,7 +32,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="http://www.tdcsinstitute.com/demo/">Start Quiz</a>
+                        <a href="<?php echo site_url('Quiz/index?id=' . $data['course']->id  ) ?>">Start Quiz</a>
                     </li>
                 </ul>
             </div>
@@ -42,18 +41,18 @@
                     <h3 class="nomargin">List Of Modules</h3>
                 </div>
                 <ul>
-                    <li>
-                        <a href="http://www.tdcsinstitute.com/demo/">Demo</a>
-                    </li>
-                    <li>
-                        <a href="http://www.tdcsinstitute.com/learn-about-cpe-consulting/">Learn About CPE Consulting</a>
-                    </li>
-                    <li>
-                        <a href="http://www.tdcsinstitute.com/tdcs-occupational-task-enhancement/">tDCS Occupational Task Enhancement</a>
-                    </li>
-                    <li>
-                        <a href="http://www.tdcsinstitute.com/scientific-and-ethical-issues-with-tdcs/">Scientific and Ethical Issues with tDCS</a>
-                    </li>
+
+
+                    <?php
+
+                        foreach ($data['courses'] as $course) {
+                            echo '<li>
+                                    <a href="'. site_url('ViewModule/index?id=' . $course->id ) .'">'. $course->name .'</a>
+                                </li>'; 
+                            }
+
+                    ?>
+
                 </ul>
             </div>
 

@@ -24,54 +24,25 @@
                                     <span class="right">Status</span>
                                 </div>
                                 <div id="lessons_list">
-                                    <div class="post-2453 is_not_sample">
-                                        <div class="list-count">
-                                            1                           
-                                        </div>
-                                        <h4>
-                                            <a class="notcompleted" href="http://www.tdcsinstitute.com/lessons/module-vi/">Module VI</a>
-                                        </h4>
-                                    </div>
-                                    <div class="post-2455 is_not_sample">
-                                        <div class="list-count">
-                                            2                           
-                                        </div>
-                                        <h4>
-                                            <a class="notcompleted" href="http://www.tdcsinstitute.com/lessons/module-v/">Module V</a>
-                                        </h4>
-                                    </div>
-                                    <div class="post-2468 is_not_sample">
-                                        <div class="list-count">
-                                            3                           
-                                        </div>
-                                        <h4>
-                                            <a class="notcompleted" href="http://www.tdcsinstitute.com/lessons/module-iv/">Module IV</a>
-                                        </h4>
-                                    </div>
-                                    <div class="post-2451 is_not_sample">
-                                        <div class="list-count">
-                                            4                           
-                                        </div>
-                                        <h4>
-                                            <a class="notcompleted" href="http://www.tdcsinstitute.com/lessons/module-iii/">Module III</a>
-                                        </h4>
-                                    </div>
-                                    <div class="post-2449 is_not_sample">
-                                        <div class="list-count">
-                                            5                           
-                                        </div>
-                                        <h4>
-                                            <a class="notcompleted" href="http://www.tdcsinstitute.com/lessons/module-ii/">Module II</a>
-                                        </h4>
-                                    </div>
-                                    <div class="post-2443 is_not_sample">
-                                        <div class="list-count">
-                                            6                           
-                                        </div>
-                                        <h4>
-                                            <a class="notcompleted" href="http://www.tdcsinstitute.com/lessons/module-i/">Module I</a>
-                                        </h4>
-                                    </div>
+
+                                    <?php
+                                        $count = 0;
+                                        foreach ($data['courses'] as $course) {
+                                            $attempt = $course->attempt ? 'completed' : 'notcompleted';
+                                            $count++;
+                                            echo '<div class="post-2453 is_not_sample">
+                                                    <div class="list-count">
+                                                        '. $count .'                           
+                                                    </div>
+                                                    <h4>
+                                                        <a class="'. $attempt .'" href="'. site_url('ViewModule/index?id=' . $course->courseId ) .' ">'. $course->name .'</a>
+                                                    </h4> 
+                                                </div>';
+
+                                        }
+
+                                    ?>
+
                                 </div>
                             </div>
                         </div>
