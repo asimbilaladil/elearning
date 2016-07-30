@@ -12,8 +12,8 @@
 <div class="main-content">
   <div class="row">
     <div class="eightcol column">
-      <h1>Sample Lesson Quiz</h1>
-      <p>Donec feugiat tincidunt lectus a interdum. Nunc vulputate, nunc ut elementum iaculis, libero mi rhoncus leo, fringilla convallis mi ligula in erat. Integer accumsan nisl ac eros consectetur nec dictum orci tempus. Proin mollis gravida accumsan. In cursus iaculis sapien eget sollicitudin. Sed at ante dolor. Pellentesque hendrerit, dolor sit amet laoreet aliquam, purus neque dignissim turpis, nec imperdiet felis nisl nec urna.&nbsp;Nulla lacinia facilisis nunc quis gravida.</p>
+
+
       <div class="quiz-listing">
         <form id="quiz_form" action="<?php echo site_url('Quiz/save') ?>" onsubmit="return validate();" method="POST">
           <div class="message">
@@ -41,8 +41,8 @@
 
             }
 
-            echo '<input type="hidden" id="count" value="'. $data['courseId'] .'" />';
-            echo '<input type="hidden" id="courseId" value="'. $count .'" />';
+            echo '<input type="hidden" name="courseId" value="'. $data['courseId'] .'" />';
+            echo '<input type="hidden" id="count" value="'. $count .'" />';
 
           ?>
 
@@ -61,6 +61,8 @@ function validate() {
   var count = $('#count').val();
 
   var correctAnswer = 0;
+
+  console.log(count);
 
   for(var i=1; i <= count; i++) {
 

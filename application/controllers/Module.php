@@ -8,11 +8,18 @@ class Module extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->model('CourseModel');
+
+        if (!$this->session->userdata('id')) {
+            redirect('register');
+        }
+
     }
 
     public function index() {   
-        
-        $data['courses'] = $this->CourseModel->getCourses();
+    
+        $userId = $this->session->userdata('id');
+
+        $data['courses'] = $this->CourseModel->getCourseAttempt($userId);
  
         $this->load->view('common/header');
         $this->load->view('Module', array('data' => $data));

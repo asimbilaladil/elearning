@@ -28,13 +28,14 @@
                                     <?php
                                         $count = 0;
                                         foreach ($data['courses'] as $course) {
+                                            $attempt = $course->attempt ? 'completed' : 'notcompleted';
                                             $count++;
                                             echo '<div class="post-2453 is_not_sample">
                                                     <div class="list-count">
                                                         '. $count .'                           
                                                     </div>
                                                     <h4>
-                                                        <a class="notcompleted" href="'. site_url('ViewModule/index?id=' . $course->id ) .' ">'. $course->name .'</a>
+                                                        <a class="'. $attempt .'" href="'. site_url('ViewModule/index?id=' . $course->courseId ) .' ">'. $course->name .'</a>
                                                     </h4> 
                                                 </div>';
 

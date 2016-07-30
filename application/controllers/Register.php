@@ -56,7 +56,16 @@ class Register extends CI_Controller {
         $user = $this->User->checkUserLogin($userEmail, $password);
 
         if ($user) {
-            redirect('course');
+
+            $loginUser = array(
+                    'id'  => $user->id,
+                    'email' => $user->user_email,
+                    'type' => $user->type
+            );
+
+            $this->session->set_userdata($loginUser);
+            redirect('module');
+            
         } else {
             $this->index();
         }

@@ -100,8 +100,9 @@
     
         html += ' <div class="box-body"> ';
         html += ' <div class="form-group"> ';
+        html += ' <label for="" class="col-sm-2 control-label"> Select Correct Answer </label> ';        
         html += ' <div class="col-sm-6"> ';
-        html += ' <select name="answer' + q + '"> ';
+        html += ' <select class="form-control"  name="answer' + q + '"> ';
         html += ' <option value="1"> 1 </option> ';
         html += ' <option value="2"> 2 </option> ';
         html += ' <option value="3"> 3 </option> ';
@@ -113,7 +114,7 @@
     
         html += ' <div class="box-body"> ';
         html += ' <div class="form-group"> ';
-        html += ' <div class="col-sm-6"> ';
+        html += ' <div class="col-sm-offset-2 col-sm-2"> ';
         html += ' <input type="submit" class="btn btn-primary btn-block" value="Create Quiz" /> ';
         html += ' </div> <br> </div> </div> ';
     

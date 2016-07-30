@@ -8,6 +8,11 @@ class Quiz extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->model('QuizModel');
+        $this->load->model('UserAtemptModuleModel');
+
+        if (!$this->session->userdata('id')) {
+            redirect('register');
+        }        
         
     }
 
@@ -37,6 +42,15 @@ class Quiz extends CI_Controller {
     }
 
     public function save() {
+
+        $data = array(
+            'user_id' => $this->session->userdata('id'),
+            'course_id' => $this->input->post('courseId', true)
+        );
+
+        $this->UserAtemptModuleModel->insert($data);
+
+        redirect('Module');
 
     }
 }
