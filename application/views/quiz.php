@@ -18,13 +18,14 @@
         <form id="quiz_form" action="<?php echo site_url('Quiz/save') ?>" onsubmit="return validate();" method="POST">
           <div class="message">
           </div>
-          <div class="quiz-question multiple">
+          
 
           <?php
             $count = 0;
             foreach ($data['questions'] as $item) {
               $count++;    
               echo '
+              <div class="quiz-question multiple">
               <div class="question-title">
                 <div class="question-number">'. $count .'</div>
                 <h4 class="nomargin">' . $item->question .'</h4>
@@ -37,7 +38,7 @@
               </ul>
             </div>
             <input type="hidden" id="answer'. $count .'" value="'. $item->answer .'" />
-            <p id="error'. $count .'" style="display: none"> Answer is incorrect. </p>';
+            <div id="error'. $count .'" style="display: none" ><h6 class="nomargin" style="color:red"  >Answer is incorrect.</h6></div>';
 
             }
 
