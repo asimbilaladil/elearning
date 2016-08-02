@@ -16,6 +16,8 @@ class CreateQuiz extends CI_Controller {
     public function index() {
         
         $data['courses'] = $this->CourseModel->getCourses();
+        $data['quizCourses'] = $this->QuizModel->createdQuizCourses();
+        $data['notQuizCourses'] = $this->QuizModel->notCreatedQuizCourses();
 
         $this->loadView('admin/CreateQuiz', $data);
 
@@ -67,6 +69,12 @@ class CreateQuiz extends CI_Controller {
 
     }
 
+    public function delete() {
+        
+        $id = $this->input->get('id');
+        $this->QuizModel->delete($id);
+        redirect('CreateQuiz');
 
+    }
 
 }

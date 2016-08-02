@@ -39,5 +39,39 @@ class QuizModel extends CI_Model {
     public function update() {
 
     }
+
+
+    public function delete($id) {
+
+        $this->db->delete( 'quiz' , array( 'course_id' => $id) ); 
+
+    }
+
+    /*
+    *
+    * Get courses name and coures id whose quiz is already created
+    *
+    */
+
+    public function createdQuizCourses() {
+        
+        $query = $this->db->query('SELECT `name`, `id` FROM `courses` WHERE id in (select DISTINCT(course_id) from quiz )' );
+        $query->result();
+        
+        return $query->result();
+    } 
     
+    /*
+    *
+    * Get courses name and coures id  whose quiz is not created
+    *
+    */
+
+    public function notCreatedQuizCourses() {
+        
+        $query = $this->db->query('SELECT `name`, `id` FROM `courses` WHERE id not in (select DISTINCT(course_id) from quiz )' );
+        $query->result();
+        
+        return $query->result();
+    }  
 }
