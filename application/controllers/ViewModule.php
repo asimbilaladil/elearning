@@ -15,15 +15,17 @@ class ViewModule extends CI_Controller {
 
     }
 
-
     public function index() {
 
-        $id = $this->input->get('id');
+        $courseId = $this->input->get('id');
 
-        if (isset($id)) {
+        if (isset($courseId)) {
 
-            $data['course'] = $this->CourseModel->getCourseById($id);
-            $data['courses'] = $this->CourseModel->getCoursesExceptId($id);
+            $userId = $this->session->userdata('id');
+
+            $data['course'] = $this->CourseModel->getCourseById($courseId);
+            $data['courses'] = $this->CourseModel->getCoursesExceptId($courseId);
+            $data['attempt'] = $this->CourseModel->checkUserAttemptCourse($courseId, $userId);
 
             $this->load->view('common/header');
             $this->load->view('ViewModule', array('data' => $data));

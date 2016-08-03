@@ -18,7 +18,10 @@ class UserAtemptModuleModel extends CI_Model {
         return -1 ;
     }
  
-
-    
+    //SELECT COUNT(id) as attemptCount FROM user_attempt_module where user_id = 2
+    public function getUserAttemptCount($id) {
+        $query = $this->db->query('SELECT COUNT(id) as attemptCount FROM user_attempt_module where user_id = ' . $id);
+        return $query->row();
+    }
 
 }
