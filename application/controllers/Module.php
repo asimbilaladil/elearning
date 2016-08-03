@@ -8,6 +8,7 @@ class Module extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->model('CourseModel');
+        $this->load->model('UserAtemptModuleModel');
 
         if (!$this->session->userdata('id')) {
             redirect('register');
@@ -20,7 +21,14 @@ class Module extends CI_Controller {
         $userId = $this->session->userdata('id');
 
         $data['courses'] = $this->CourseModel->getCourseAttempt($userId);
- 
+    
+        $courseCount = $this->CourseModel->getCourseCount();
+        $attemptCount = $this->UserAtemptModuleModel->getUserAttemptCount($userId);
+
+        if( $courseCount->courseCount == $attemptCount->attemptCount ) {
+            redirect('Congratulations');
+        }
+
         $this->load->view('common/header');
         $this->load->view('Module', array('data' => $data));
         $this->load->view('common/footer');

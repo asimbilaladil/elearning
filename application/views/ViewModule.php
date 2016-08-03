@@ -32,7 +32,15 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="<?php echo site_url('Quiz/index?id=' . $data['course']->id  ) ?>">Start Quiz</a>
+                        <?php
+
+                            if ( !isset($data['attempt']) ) {
+                                echo '<a href="site_url(Quiz/index?id=' . $data['course']->id . ')">Start Quiz</a>';
+                            } else {
+                                echo '<a href="">Quiz Attempted</a>';
+                            }
+
+                        ?>
                     </li>
                 </ul>
             </div>
