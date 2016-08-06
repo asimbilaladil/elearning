@@ -16,7 +16,9 @@
                 <div class="post-content">
                     <h1>Learning with CPE</h1>
                     <div class="learndash user_has_no_access" id="learndash_post_2446">
-                       
+                       <p>The following course in a safe neuro-modulation technique (tDCS) consists of a total of six tutorial-modules, each followed by a short quiz.  
+Please take the modules following their numerical order.  After completion of each module, take a quiz.  Continue through the module IV.  
+</p>
                         <div id="learndash_course_content">
                             <div id="learndash_lessons">
                                 <div id="lesson_heading">

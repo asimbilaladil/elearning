@@ -35,7 +35,7 @@
                         <?php
 
                             if ( !isset($data['attempt']) ) {
-                                echo '<a href="site_url(Quiz/index?id=' . $data['course']->id . ')">Start Quiz</a>';
+                                echo '<a href="'.site_url('Quiz/index') .'?id=' . $data['course']->id . '">Start Quiz</a>';
                             } else {
                                 echo '<a href="">Quiz Attempted</a>';
                             }
