@@ -306,9 +306,11 @@ address {
 /*------------------------- Form Elements  -------------------------*/
 
 input[type="text"],
+input[type="date"],
 input[type="password"],
 input[type="email"],
-input[type="number"], 
+input[type="number"],
+input[type="date"], 
 select, 
 textarea {
 	display:block;
@@ -562,6 +564,7 @@ p > .button:first-child {
 
 .formatted-form .wp-editor-wrap,
 .formatted-form input[type="text"],
+.formatted-form input[type="date"],
 .formatted-form input[type="password"],
 .formatted-form input[type="number"],
 .formatted-form input[type="email"],
@@ -3604,6 +3607,7 @@ textarea,
 input[type="submit"],
 input[type="button"],
 input[type="text"],
+input[type="date"]
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -3795,6 +3799,7 @@ ul.products li.product img,
 
 .main-content textarea,
 .main-content input[type="text"],
+.main-content input[type="date"],
 .main-content input[type="password"] {
 	-webkit-box-shadow:0 2px 5px rgba(204,204,204,0.4) inset;
 	-moz-box-shadow:0 2px 5px rgba(204,204,204,0.4) inset;

@@ -19,31 +19,12 @@
             <p> Now, it is your opportunity to get certified as a CPE Consultant and begin new and rewarding career in cognitive performance enhancement industry.  Please take a moment to get the Institute’s certification of your professional credentials. </p>
 
             </p>
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
 
-                <!-- Identify your business so that you can collect the payments. -->
-                <input type="hidden" name="business" value="asimbilaladil@gmail.com">
-                
-                <!-- Specify a Buy Now button. -->
-                <input type="hidden" name="cmd" value="_xclick">
-                
-                <!-- Specify details about the item that buyers will purchase. -->
-                <input type="hidden" name="item_name" value="Professional">
-
-                <input type="hidden" name="amount" value="20">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="custom" value="USD">
-                
-                <!-- Specify URLs -->
-                <input type='hidden' name='cancel_return' value='http://example.com/cancel.php'>
-                <input type='hidden' name='return' value='http://www.tdcsinstitute.com/beta/index.php/Congratulations/success'>
-                
-                <!-- Display the payment button. -->
-                <input type="image" name="submit" border="0"
-                src="<?php echo base_url("assets/images/paypal.png") ?>" alt="PayPal - The safer, easier way to pay online">
-            
-            </form>
+  
 
         </div>
+                <a href="<?php echo site_url('CertificationForm/') ?>"> <button type="button" class="button submit-button left">CERTIFY ME</button></a>
+
     </div>
+
 </div>
