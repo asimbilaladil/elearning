@@ -110,8 +110,8 @@
 
                 </li>
                 <li id="menu-item-238" class="menu-item menu-item-type-taxonomy menu-item-object-course_category menu-item-238"><a href="#">Career Centre</a></li>
-                <li id="menu-item-2114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2114"><a href="#">Certified Consultants</a></li>
-                <li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="News">Industry Issues</a></li>
+                <li id="menu-item-2114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2114"><a href="#">CPE Consultants</a></li>
+                <li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="News">CPE Issues</a></li>
                 <li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="#">About</a></li>
                 <li id="menu-item-603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-603"><a href="#">Support</a></li>
               </ul>
