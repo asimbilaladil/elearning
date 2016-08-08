@@ -21,7 +21,6 @@ class User extends CI_Model {
         return $result;
     }
 
-
     public function checkIfUserExist($userEmail) {
 
         $this->db->select('*');
@@ -43,6 +42,13 @@ class User extends CI_Model {
 
     public function update() {
 
+    }
+
+    public function professionalUserSave($data) {
+        if ($this->db->insert('professional_users', $data) ) {
+            return $this->db->insert_id();
+        } 
+        return -1 ;        
     }
     
 }
