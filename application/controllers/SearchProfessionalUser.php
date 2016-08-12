@@ -28,11 +28,14 @@ class SearchProfessionalUser extends CI_Controller {
 
         $searchData = $this->input->get('state', true);
 
-        $searchText = $searchData['searchText'];
-        $searchBy = $searchData['searchBy'];
+        $name = $searchData['name'];
+        $phone = $searchData['phone'];
+        $email = $searchData['email'];
+        $country = $searchData['country'];
+        $city = $searchData['city'];
 
 
-        $result = $this->ProfessionalUserModel->searchUser($searchText, $searchBy);
+        $result = $this->ProfessionalUserModel->searchProfessioanUser($name, $phone, $email, $country, $city);
 
 
         $html = '<table>
@@ -64,7 +67,6 @@ class SearchProfessionalUser extends CI_Controller {
         }
 
         $html .= '</table>';
-
 
         echo $html;
 
