@@ -18,6 +18,16 @@ class CertificationModel extends CI_Model {
     }
 
     
+    public function getUserById($id){
+        $this->db->select('*');
+        $this->db->from('certification');
+        $this->db->where('user_id', $id);
+        $quary_result=$this->db->get();
+        $result=$quary_result->row();
+        return $result;
+    }
+
+
     public function update() {
 
     }

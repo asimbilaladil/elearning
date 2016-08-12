@@ -70,17 +70,7 @@
                         <input type="text" name="telNumber" placeholder="Telephone Number"   required>
                     </div>
                 </div>
-                <div class="clear"></div>
-                <div class="sixcol column">
-                    <div class="field-wrapper">
-                        <h6>New User Id: </h6>
-                    </div>
-                </div>
-                <div class="sixcol column last">
-                    <div class="field-wrapper">
-                        <input type="text" name="userId" placeholder="UserId"   required>
-                    </div>
-                </div>
+
                 <div class="clear"></div>
                 <div class="sixcol column">
                     <div class="field-wrapper">
