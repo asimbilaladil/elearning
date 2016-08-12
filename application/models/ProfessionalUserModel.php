@@ -9,9 +9,18 @@ class ProfessionalUserModel extends CI_Model {
     }
 
 
-    public function searchUser( $searchText, $searchBy ) {
+    public function searchProfessioanUser( $name, $phone, $email, $country, $city ) {
 
-        $query = $this->db->query("select * from professional_users where ". $searchBy ." LIKE '%". $searchText ."%'");
+        $whereArr = array();
+        if($name != "") $whereArr[] = "fullName LIKE '%{$name}%'";
+        if($phone != "") $whereArr[] = "telephoneNumber LIKE '%{$phone}%'";
+        if($email != "") $whereArr[] = "email LIKE '%{$email}%'";
+        if($country != "") $whereArr[] = "country LIKE '%{$country}%'";
+        if($city != "") $whereArr[] = "city LIKE '%{$city}%'";
+
+        $whereStr = implode(" AND ", $whereArr);
+
+        $query = $this->db->query("select * from professional_users where " . $whereStr);
         return $query->result();                
 
     }

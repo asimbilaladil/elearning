@@ -37,24 +37,45 @@
           <form data-cart-item="0" class="ab-details-step">
             <div class="ab-row-fluid ab-col-phone">
               <div class="ab-formGroup ab-left">
-                <label class="ab-formLabel">Search</label>
+                <label class="ab-formLabel">Name</label>
                 <div class="ab-formField">
-                  <input type="text" id="searchText" maxlength="60" value="" class="ab-formElement ab-full-name">
+                  <input type="text" id="name" maxlength="60" value="" class="ab-formElement ab-full-name">
                 </div>
                 <div class="ab-full-name-error ab-label-error ab-bold"></div>
               </div>
 
               <div class="ab-formGroup ab-left">
-                <label class="ab-formLabel">Search By</label>
+                <label class="ab-formLabel">Phone</label>
                 <div class="ab-formField" >
-                <input type="radio" name="searchBy" value="fullName"> Name </input>
-                  <input type="radio" name="searchBy" value="telephoneNumber"> Phone </input>
-                  <input type="radio" name="searchBy" value="email"> Email </input>
-                  <input type="radio" name="searchBy" value="country"> Country </input>
-                  <input type="radio" name="searchBy" value="city"> City </input>
+                  <input type="text" id="phone" maxlength="60" value="" class="ab-formElement ab-full-name">
                 </div>
                 <div class="ab-full-name-error ab-label-error ab-bold"></div>
               </div>
+
+              <div class="ab-formGroup ab-left">
+                <label class="ab-formLabel">Email</label>
+                <div class="ab-formField" >
+                  <input type="text" id="email" maxlength="60" value="" class="ab-formElement ab-full-name">
+                </div>
+                <div class="ab-full-name-error ab-label-error ab-bold"></div>
+              </div>
+
+              <div class="ab-formGroup ab-left">
+                <label class="ab-formLabel">country</label>
+                <div class="ab-formField" >
+                  <input type="text" id="country" maxlength="60" value="" class="ab-formElement ab-full-name">
+                </div>
+                <div class="ab-full-name-error ab-label-error ab-bold"></div>
+              </div>
+
+
+              <div class="ab-formGroup ab-left">
+                <label class="ab-formLabel">City</label>
+                <div class="ab-formField" >
+                  <input type="text" id="city" maxlength="60" value="" class="ab-formElement ab-full-name">
+                </div>
+                <div class="ab-full-name-error ab-label-error ab-bold"></div>
+              </div>                            
 
 
                 <div class="ab-user-phone-error ab-label-error ab-bold"></div>
@@ -85,13 +106,13 @@
   <script>
 
       function search() {
-                
-        var searchText =  $('#searchText').val();
-        var searchBy = document.querySelector('input[name = "searchBy"]:checked').value;
         
         var data = {
-          'searchText': searchText,
-          'searchBy': searchBy
+          name : $('#name').val(),
+          phone : $('#phone').val(),
+          email : $('#email').val(),
+          country : $('#country').val(),
+          city : $('#city').val(),
         };
 
         $.get('<?php echo site_url('SearchProfessionalUser/search') ?>', {
