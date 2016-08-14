@@ -52,8 +52,6 @@ class ProfessionalUser extends CI_Controller {
             $uploadPath . '/' . $file_name;                 //upload path with file name
             $data = array('upload_data' => $this->upload->data());
 
-            $uploadPath . '/' . $file_name;
-
             $data = array(
                 'fullName' => $this->input->post('fullName', true),
                 'certificateNumber  ' => $this->input->post('certificateNumber', true),
@@ -67,7 +65,7 @@ class ProfessionalUser extends CI_Controller {
                 'country' => $certificateData->country,
                 'city' => $certificateData->city,
                 'location' => $this->input->post('location', true),
-                'imagePath' => $uploadPath
+                'imagePath' => $uploadPath . '/' . $file_name
                 ); 
 
             $this->User->professionalUserSave( $data );
