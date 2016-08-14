@@ -27,6 +27,7 @@
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.raty.min.js") ?>"></script>
         <link rel="stylesheet"  href="<?php echo base_url("assets/css/bookly-main.css") ?>" type="text/css" media="all">
 
+
     <script type="text/javascript">
 
       /* <![CDATA[ */
