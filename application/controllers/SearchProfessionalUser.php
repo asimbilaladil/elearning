@@ -52,7 +52,7 @@ class SearchProfessionalUser extends CI_Controller {
 
         foreach ($result as $row) {
 
-            $appointmentUrl = site_url('ProfessionalUserDetail/index?id=' . $row->userId );
+            $appointmentUrl = site_url('Profile/index?id=' . $row->userId );
 
             $html .= '<tr>
                     <td>'. $row->fullName .'</td>
