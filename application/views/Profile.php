@@ -23,8 +23,8 @@
                         <article id="post-2573" class="w2dc-row w2dc-listing  ">
                             <div class="w2dc-pull-left w2dc-listing-logo-wrap w2dc-anim-style-6">
                                 <figure class="w2dc-listing-logo w2dc-listings-own-page">
-                                    <a href="http://www.tdcsinstitute.com/web-2-0-directory/abc-consultancy/" class="w2dc-listing-logo-img-wrap">
-                                        <div class="w2dc-listing-logo-img" style="background-image: url('http://www.tdcsinstitute.com/wp-content/uploads/2016/05/alban-man.jpg');">
+                                    <a href="" class="w2dc-listing-logo-img-wrap">
+                                        <div class="w2dc-listing-logo-img" style="background-image: url('<?php echo  base_url() . $data['user']->imagePath ?>');">
                                             <img src="http://www.tdcsinstitute.com/wp-content/uploads/2016/05/alban-man.jpg">
                                         </div>
                                     </a>
@@ -33,22 +33,22 @@
                                             <div class="w2dc-figcaption-middle">
                                                 <ul class="w2dc-figcaption-options" style="padding-left: 1em; text-indent: -1em;">
                                                     <li class="w2dc-listing-figcaption-option">
-                                                        <a href="http://www.tdcsinstitute.com/web-2-0-directory/abc-consultancy/">
+                                                        <a href="">
                                                         <span class="w2dc-glyphicon w2dc-glyphicon-play" title="more info >>"></span>
                                                         </a>
                                                     </li>
                                                     <li class="w2dc-listing-figcaption-option">
-                                                        <a href="javascript:void(0);" class="w2dc-show-on-map" data-location-id="69">
+                                                        <a href="" data-location-id="69">
                                                         <span class="w2dc-glyphicon w2dc-glyphicon-map-marker" title="view on map"></span>
                                                         </a>
                                                     </li>
                                                     <li class="w2dc-listing-figcaption-option">
-                                                        <a href="http://www.tdcsinstitute.com/web-2-0-directory/abc-consultancy/#comments-tab">
+                                                        <a href="">
                                                         <span class="w2dc-glyphicon w2dc-glyphicon-comment" title="0 replies"></span>
                                                         </a>
                                                     </li>
                                                     <li class="w2dc-listing-figcaption-option">
-                                                        <a href="http://www.tdcsinstitute.com/web-2-0-directory/abc-consultancy/#contact-tab">
+                                                        <a href="">
                                                         <span class="w2dc-glyphicon w2dc-glyphicon-user" title="contact us"></span>
                                                         </a>
                                                     </li>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="w2dc-clearfix w2dc-listing-text-content-wrap">
                                 <header class="w2dc-listing-header">
-                                    <h2><a href="http://www.tdcsinstitute.com/web-2-0-directory/abc-consultancy/" title="Mustafa Xaja">Mustafa Xaja</a> </h2>
+                                    <h2><a href="" > <?php echo $data['user']->fullName ?> </a> </h2>
                                 </header>
                                 <div class="w2dc-field w2dc-field-output-block w2dc-field-output-block-address w2dc-field-output-block-2">
                                     <span class="w2dc-field-caption">
@@ -69,7 +69,7 @@
                                     </span>
                                     <span class="w2dc-field-content">
                                         <address class="w2dc-location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                                            <span class="w2dc-show-on-map" data-location-id="69">           <span itemprop="streetAddress">St. Muhamet Gjollesha 54</span>, <span itemprop="addressLocality">Tirana, Albania</span>         </span>     
+                                            <span class="w2dc-show-on-map" data-location-id="69"> <span itemprop="streetAddress"> <?php echo $data['user']->location ?> </span>     
                                         </address>
                                     </span>
                                 </div>
@@ -78,8 +78,7 @@
                                     <span class="w2dc-field-icon w2dc-fa w2dc-fa-lg w2dc-fa-phone"></span>
                                     <span class="w2dc-field-name">Phone:</span>
                                     </span>
-                                    <span class="w2dc-field-content">
-                                    +355 222 90 45  </span>
+                                    <span class="w2dc-field-content">  <?php echo $data['user']->telephoneNumber ?> </span>
                                 </div>
                                 <div class="w2dc-field w2dc-field-output-block w2dc-field-output-block-string w2dc-field-output-block-6">
                  <div class="ab-service-step">
@@ -193,8 +192,7 @@
                                         <span class="w2dc-field-icon w2dc-fa w2dc-fa-lg w2dc-fa-phone"></span>
                                         <span class="w2dc-field-name">Phone:</span>
                                         </span>
-                                        <span class="w2dc-field-content">
-                                        +64 4 381 3057  </span>
+                                        <span class="w2dc-field-content"> <?php echo $data['user']->telephoneNumber ?> </span>
                                     </div>
                                     <div class="w2dc-field w2dc-field-output-block w2dc-field-output-block-website w2dc-field-output-block-7">
                                         <span class="w2dc-field-caption">
@@ -202,7 +200,7 @@
                                         <span class="w2dc-field-name">Website:</span>
                                         </span>
                                         <span class="w2dc-field-content">
-                                        <a itemprop="url" href="http://www.tdcsinstitute.com/" target="_blank" rel="nofollow">view our site</a>
+                                        <a itemprop="url" href="<?php echo $data['user']->websiteUrl ?>" target="_blank" rel="nofollow">view our site</a>
                                         </span>
                                     </div>
                                     <div class="w2dc-field w2dc-field-output-block w2dc-field-output-block-email w2dc-field-output-block-8">
@@ -212,7 +210,7 @@
                                         <span class="w2dc-field-name">Email:</span>
                                         </span>
                                         <span class="w2dc-field-content">
-                                        <a href="mailto:m.b.wells@tdcsinstitute.com">m.b.wells@tdcsinstitute.com</a>
+                                        <a href=""><?php echo $data['user']->email ?></a>
                                         </span>
                                     </div>
                                 </div>

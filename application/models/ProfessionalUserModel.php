@@ -8,6 +8,15 @@ class ProfessionalUserModel extends CI_Model {
         parent::__construct();
     }
 
+    public function getProfessionalUserById( $id ) {
+
+        $this->db->select('*');
+        $this->db->from('professional_users');
+        $this->db->where('userId', $id);
+        $quary_result=$this->db->get();
+        return $result=$quary_result->row();
+        
+    }
 
     public function searchProfessioanUser( $name, $phone, $email, $country, $city ) {
 
