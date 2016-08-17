@@ -37,6 +37,9 @@
 
     <p style="font-size: 16px;">Use this resource&nbsp;to search for a certified CPE consultant in your area, verify consultant’s certified credentials, check upon consultant’s professional good standing, and&nbsp;schedule&nbsp;an appointment&nbsp;using&nbsp;our central platform that is linked to consultant’s website in “real time”.</p>
     <p>&nbsp;</p>
+    <div id='gmap_canvas' style='height:200px;width:100%;'></div>
+<br>
+
     <div class="w2dc-content">
       <div class="w2dc-content" >
         <div class="w2dc-container-fluid w2dc-listings-block ">
@@ -258,4 +261,5 @@ function selectDay(id) {
     }
 </style>
 <script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(24.8614622,67.00993879999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.8614622,67.00993879999999)});infowindow = new google.maps.InfoWindow({content:'<strong>Mustafa Xaja</strong>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+</script>
 
