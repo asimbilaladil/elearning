@@ -19,6 +19,7 @@
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.jplayer.min.js") ?>"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.themexSlider.js") ?>"></script>
+
     <script type="text/javascript">
       /* <![CDATA[ */
       var options = {"templateDirectory":"http:\/\/themextemplates.com\/demo\/academy\/wp-content\/themes\/academy\/"};
