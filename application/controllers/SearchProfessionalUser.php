@@ -41,7 +41,6 @@ class SearchProfessionalUser extends CI_Controller {
         $html = '<table>
             <tr>
               <td> Name </td>
-              <td> Certificate No# </td>
               <td> Email </td>
               <td> Business Address </td>
               <td> Phone Number </td>
@@ -56,7 +55,6 @@ class SearchProfessionalUser extends CI_Controller {
 
             $html .= '<tr>
                     <td>'. $row->fullName .'</td>
-                    <td>'. $row->certificateNumber .'</td>
                     <td>'. $row->email .'</td>
                     <td>'. $row->businessAddress .'</td>
                     <td>'. $row->telephoneNumber .'</td>

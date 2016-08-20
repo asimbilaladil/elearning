@@ -48,7 +48,7 @@
               <div class="w2dc-pull-left w2dc-listing-logo-wrap w2dc-anim-style-6">
                 <figure class="w2dc-listing-logo w2dc-listings-own-page">
                   <a href="" class="w2dc-listing-logo-img-wrap">
-                    <div class="w2dc-listing-logo-img" style="background-image: url('<?php echo  base_url() . $data['user']->imagePath ?>');">
+                    <div class="w2dc-listing-logo-img" style="background-image: url('<?php echo  base_url() .'uploads/'. $data['user']->imagePath ?>');">
                       <img src="http://www.tdcsinstitute.com/wp-content/uploads/2016/05/alban-man.jpg">
                     </div>
                   </a>
