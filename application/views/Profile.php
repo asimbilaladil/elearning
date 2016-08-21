@@ -98,7 +98,7 @@
                   </span>
                   <span class="w2dc-field-content">
                   <address class="w2dc-location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                    <span class="w2dc-show-on-map" data-location-id="69"> <span itemprop="streetAddress"> <?php echo $data['user']->location ?> </span>     
+                    <span class="w2dc-show-on-map" data-location-id="69"> <span itemprop="streetAddress" id="address"> <?php echo $data['user']->location ?> </span>     
                   </address>
                   </span>
                 </div>
@@ -260,6 +260,58 @@ function selectDay(id) {
     background:none!important
     }
 </style>
-<script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(24.8614622,67.00993879999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(24.8614622,67.00993879999999)});infowindow = new google.maps.InfoWindow({content:'<strong>Mustafa Xaja</strong>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+<script type='text/javascript'>
+
+var geocoder;
+var map;
+var address = document.getElementById('address').innerHTML;
+
+function initialize() {
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var myOptions = {
+    zoom: 8,
+    center: latlng,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    },
+    navigationControl: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+  if (geocoder) {
+    geocoder.geocode({
+      'address': address
+    }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+          map.setCenter(results[0].geometry.location);
+
+          var infowindow = new google.maps.InfoWindow({
+            content: '<b>' + address + '</b>',
+            size: new google.maps.Size(150, 50)
+          });
+
+          var marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map,
+            title: address
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+          });
+
+        } else {
+          alert("No results found");
+        }
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
 </script>
 

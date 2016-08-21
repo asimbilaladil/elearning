@@ -8,6 +8,7 @@ class Profile extends CI_Controller {
         parent::__construct();
         $this->load->model('ProfessionalUserModel');
         $this->load->model('AppointmentModel');
+        $this->load->library('email');
         
     }
 
@@ -45,6 +46,8 @@ class Profile extends CI_Controller {
 
         $result = $this->AppointmentModel->getAppointmentByDate( $date );
 
+        $professionalUser = $this->ProfessionalUserModel->getProfessionalUserById( $this->session->userdata('id') );
+
         $startTime = $this->input->post('startTime', true);
 
         $endTime = $this->input->post('endTime', true);
@@ -58,9 +61,7 @@ class Profile extends CI_Controller {
                   $startTime < $row->startTime && $endTime > $row->endTime) {
 
                 $appoint = false;
-
             }
- 
         }
 
         if ($appoint) {
@@ -77,12 +78,28 @@ class Profile extends CI_Controller {
             );
 
             $this->AppointmentModel->insert($data);
+
+            $this->sendEmail( $professionalUser->email);
+
             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=success');
 
         } else {
-            
             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=error');
         }
+
+    }
+
+
+    //send appointment email to professional user
+    public function sendEmail( $email ) {
+        
+        $this->email->from('your@example.com', 'Your Name');
+        $this->email->to( $email );
+
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+
+        $this->email->send();
 
     }
     
