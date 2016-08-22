@@ -56,7 +56,8 @@ class Profile extends CI_Controller {
         $endTime = $this->input->post('endTime', true);
 
         $appoint = true;
-
+        
+        $user_email = $this->session->userdata('email');
 
         foreach ($result as $row) {
 
@@ -85,6 +86,7 @@ class Profile extends CI_Controller {
             $this->AppointmentModel->insert($data);
 
             $this->sendEmail( $professionalUser->email);
+            $this->sendEmail( $user_email );
           
 
             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=success');
