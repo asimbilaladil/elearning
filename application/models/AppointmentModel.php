@@ -17,10 +17,11 @@ class AppointmentModel extends CI_Model {
         return -1 ;
     }
 
-    public function getAppointmentByDate( $date ) {
+    public function getAppointmentByDate( $date , $id ) {
         $this->db->select('*');
         $this->db->from('appointment');
         $this->db->where('date', $date);
+        $this->db->where('professionalUserId', $id);
         $quary_result=$this->db->get();
         $result=$quary_result->result();
         return $result;   

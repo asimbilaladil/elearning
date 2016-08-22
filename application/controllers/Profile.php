@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Los_Angeles');
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Profile extends CI_Controller {
@@ -9,7 +11,7 @@ class Profile extends CI_Controller {
         $this->load->model('ProfessionalUserModel');
         $this->load->model('AppointmentModel');
         $this->load->library('email');
-        
+        $this->email->set_mailtype("html");
     }
 
     public function index() {   
@@ -43,17 +45,19 @@ class Profile extends CI_Controller {
 
         $date = $this->input->post('date', true);
         $endTime = $this->input->post('endTime', true);
+        $professionalId = $this->input->post('professionalId', true);
 
-        $result = $this->AppointmentModel->getAppointmentByDate( $date );
+        $result = $this->AppointmentModel->getAppointmentByDate( $date , $professionalId );
 
-        $professionalUser = $this->ProfessionalUserModel->getProfessionalUserById( $this->session->userdata('id') );
+        $professionalUser = $this->ProfessionalUserModel->getProfessionalUserById(  $professionalId  );
 
         $startTime = $this->input->post('startTime', true);
 
         $endTime = $this->input->post('endTime', true);
 
         $appoint = true;
-        
+
+
         foreach ($result as $row) {
 
             if ( ($startTime >= $row->startTime && $startTime < $row->endTime) ||
@@ -65,12 +69,13 @@ class Profile extends CI_Controller {
         }
 
         if ($appoint) {
+
             $days = $this->input->post('day', true);
             $dayStr = implode(',', $days);
             
             $data = array(
                 'userId' => $this->input->post('userId', true),
-                'professionalUserId' => $this->session->userdata('id'),
+                'professionalUserId' =>  $professionalId,
                 'date' => $date,
                 'startTime' => $this->input->post('startTime', true),
                 'endTime' => $this->input->post('endTime', true),
@@ -80,10 +85,12 @@ class Profile extends CI_Controller {
             $this->AppointmentModel->insert($data);
 
             $this->sendEmail( $professionalUser->email);
+          
 
             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=success');
 
         } else {
+          
             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=error');
         }
 
@@ -93,11 +100,11 @@ class Profile extends CI_Controller {
     //send appointment email to professional user
     public function sendEmail( $email ) {
         
-        $this->email->from('your@example.com', 'Your Name');
-        $this->email->to( $email );
+        $this->email->from('no-reply@tdcsinstitute.com', 'TDCS Institute');
+        $this->email->to( $email  );
 
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
+        $this->email->subject('New Appointment Notification');
+        $this->email->message('<h1>HELLOO WORLDS</h1>');
 
         $this->email->send();
 

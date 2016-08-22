@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Los_Angeles');
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class CreateBlog extends CI_Controller {

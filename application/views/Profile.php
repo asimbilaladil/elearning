@@ -86,7 +86,8 @@
               <form action="<?php echo site_url('Profile/save') ?>" method="POST" >
 
               <input type="hidden" name="userId" value="<?php echo $data['userId'] ?>" />
-              
+              <input type="hidden" name="professionalId" value="<?php echo $_GET['id'] ?>" />
+
               <div class="w2dc-clearfix w2dc-listing-text-content-wrap">
                 <header class="w2dc-listing-header">
                   <h2><a href="" > <?php echo $data['user']->fullName ?> </a> </h2>
