@@ -262,40 +262,41 @@ function selectDay(id) {
     background:none!important
     }
 </style>
-<script type='text/javascript'>
+    <script>
+      var latitude =  document.getElementById('longitude').value ;
+      var longitude =  document.getElementById('latitude').value ;
+  
+      var latlon = {
+        lat: parseFloat(latitude) , 
+        lng: parseFloat(longitude) 
+      };
 
-var geocoder;
-var map;
-var address = document.getElementById('address').innerHTML;
+      var map;
+      function initialize() {
+        var mapOptions = {
+          zoom: 8,
+          center: latlon
+        };
+        map = new google.maps.Map(document.getElementById('gmap_canvas'),
+            mapOptions);
 
-function initialize() {
-  geocoder = new google.maps.Geocoder();
-  var latitude =  document.getElementById('latitude').value ;
-  var longitude = document.getElementById('longitude').value ;
+        var marker = new google.maps.Marker({
 
-  console.log( latitude );
+          position: latlon,
+          map: map
+        });
 
-  var latlng = new google.maps.LatLng(latitude,longitude);
 
-  var myOptions = {
-    zoom: 8,
-    center: latlng,
-    mapTypeControl: true,
-    mapTypeControlOptions: {
-      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-    },
-    navigationControl: true,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-  var marker = new google.maps.Marker({
-    position: latlng,
-    map: map
+//         var infowindow = new google.maps.InfoWindow({
+//           content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+//         });
 
-  });  
+//         google.maps.event.addListener(marker, 'click', function() {
+//           infowindow.open(map, marker);
+//         });
+      }
 
-}
-google.maps.event.addDomListener(window, 'load', initialize);
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>  
 
-</script>
 
