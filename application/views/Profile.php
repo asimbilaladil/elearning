@@ -270,9 +270,9 @@ var address = document.getElementById('address').innerHTML;
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  var latitude = parseInt( document.getElementById('latitude') );
-  var longitude = parseInt( document.getElementById('longitude') );
-  var latlng = new google.maps.LatLng(24.8813599,67.0524166);
+  var latitude =  document.getElementById('latitude').value ;
+  var longitude = document.getElementById('longitude').value ;
+  var latlng = new google.maps.LatLng(longitude,latitude);
 
   var myOptions = {
     zoom: 8,
