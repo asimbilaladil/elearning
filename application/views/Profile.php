@@ -100,7 +100,10 @@
                   <span class="w2dc-field-content">
                   <address class="w2dc-location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
                     <span class="w2dc-show-on-map" data-location-id="69"> <span itemprop="streetAddress" id="address"> <?php echo $data['user']->location ?> </span>     
-                  </address>
+                    <input id="longitude" type="hidden" value = "<?php echo $data['user']->longitude ?> " >
+                     <input id="latitude" type="hidden" value = "<?php echo $data['user']->latitude ?> " > 
+
+                      </address>
                   </span>
                 </div>
                 <div class="w2dc-field w2dc-field-output-block w2dc-field-output-block-string w2dc-field-output-block-6">
@@ -243,8 +246,6 @@
     </div>
   </div>
 </div>
-
-
 <script>
 
 function selectDay(id) {
@@ -269,7 +270,10 @@ var address = document.getElementById('address').innerHTML;
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latitude = parseInt( document.getElementById('latitude') );
+  var longitude = parseInt( document.getElementById('longitude') );
+  var latlng = new google.maps.LatLng(24.8813599,67.0524166);
+
   var myOptions = {
     zoom: 8,
     center: latlng,
@@ -281,38 +285,56 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+  
   if (geocoder) {
     geocoder.geocode({
       'address': address
     }, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-          map.setCenter(results[0].geometry.location);
+//       if (status == google.maps.GeocoderStatus.OK) {
+//         if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+//           map.setCenter(results[0].geometry.location);
 
-          var infowindow = new google.maps.InfoWindow({
-            content: '<b>' + address + '</b>',
-            size: new google.maps.Size(150, 50)
-          });
+//           var infowindow = new google.maps.InfoWindow({
+//             content: '<b>' + address + '</b>',
+//             size: new google.maps.Size(150, 50)
+//           });
 
-          var marker = new google.maps.Marker({
-            position: results[0].geometry.location,
-            map: map,
-            title: address
-          });
-          google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
-          });
+//           var marker = new google.maps.Marker({
+//             position: results[0].geometry.location,
+//             map: map,
+//             title: address
+//           });
+//           google.maps.event.addListener(marker, 'click', function() {
+//             infowindow.open(map, marker);
+//           });
 
-        } else {
-          alert("No results found");
-        }
-      } else {
-        alert("Geocode was not successful for the following reason: " + status);
-      }
+//         } else {
+//           alert("No results found");
+//         }
+//       } else {
+//         alert("Geocode was not successful for the following reason: " + status);
+//       }
     });
   }
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
+<!--    <script>
 
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+//  var latlng = new google.maps.LatLng(document.getElementById('latitude'), document.getElementById('longitude'));
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script> -->

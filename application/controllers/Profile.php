@@ -83,24 +83,28 @@ class Profile extends CI_Controller {
                 'days' => $dayStr
             );
 
-            $this->AppointmentModel->insert($data);
+              $this->AppointmentModel->insert($data);
+              $message_client = '<p>Your request for professional consulting services has been received and forwarded to the consultant of your choosing.  Someone will be contacting you shortly with the confirmation.</p>';
 
-            $this->sendEmail( $professionalUser->email);
-            $this->sendEmail( $user_email );
+              $message_professionalUser = '<p>Your professional services have been requested.  Please have your client contacted with a confirmation of the booking. </p><br><p>Details are below:</p> <br> <p>Date:'.$data["date"]  .'<br> Start time: '. $data["startTime"] .':00 <br> End time: '. $data["endTime"] .':00 <br>User Email: '.$user_email .'</p>';
+              
+              $this->sendEmail( $professionalUser->email, $message_professionalUser );
+          
+              $this->sendEmail( $user_email, $message_client );
           
 
-            redirect('Profile?id=' . $this->input->post('userId', true) . 'status=success');
+             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=success');
 
         } else {
           
-            redirect('Profile?id=' . $this->input->post('userId', true) . 'status=error');
+             redirect('Profile?id=' . $this->input->post('userId', true) . 'status=error');
         }
 
     }
 
 
     //send appointment email to professional user
-    public function sendEmail( $email ) {
+    public function sendEmail( $email, $message ) {
         
         $this->email->from('no-reply@tdcsinstitute.com', 'TDCS Institute');
         $this->email->to( $email  );
