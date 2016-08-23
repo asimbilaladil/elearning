@@ -100,8 +100,8 @@
                   <span class="w2dc-field-content">
                   <address class="w2dc-location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
                     <span class="w2dc-show-on-map" data-location-id="69"> <span itemprop="streetAddress" id="address"> <?php echo $data['user']->location ?> </span>     
-                    <input id="longitude" type="hidden" value = "<?php echo $data['user']->longitude ?> " >
-                     <input id="latitude" type="hidden" value = "<?php echo $data['user']->latitude ?> " > 
+                    <input id="longitude" type="text" value = "<?php echo $data['user']->longitude ?> " >
+                     <input id="latitude" type="text" value = "<?php echo $data['user']->latitude ?> " > 
 
                       </address>
                   </span>
