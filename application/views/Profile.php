@@ -273,7 +273,9 @@ function initialize() {
   var latitude =  document.getElementById('latitude').value ;
   var longitude = document.getElementById('longitude').value ;
 
-  var latlng = new google.maps.LatLng(longitude,latitude);
+  console.log( latitude );
+
+  var latlng = new google.maps.LatLng(latitude,longitude);
 
   var myOptions = {
     zoom: 8,

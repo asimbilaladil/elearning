@@ -198,6 +198,11 @@
                 </div>
                 <div class="clear"></div>
                 <div class="form-loader"></div>
+
+                <input type="hidden" id="latitude" name = "latitude" />
+                <input type="hidden" id="longitude" name = "longitude" />
+ 
+
             </form>
         </div>
         <div class="clear"></div>
@@ -238,6 +243,9 @@
       function fillInAddress() {
         // Get the place details from the autocomplete object.
         var place = autocomplete.getPlace();
+
+        document.getElementById('latitude').value =  place.geometry.location.lat() ;
+        document.getElementById('longitude').value =  place.geometry.location.lng() ;
 
         for (var component in componentForm) {
           document.getElementById(component).value = '';
