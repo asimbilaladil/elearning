@@ -1,4 +1,4 @@
-<div class="featured-content">
+<!-- <div class="featured-content">
     <div class="substrate">
         <img src="http://www.tdcsinstitute.com/wp-content/themes/academy/images/bgs/site_bg.jpg" class="fullwidth" alt="">          
     </div>
@@ -6,9 +6,9 @@
         <div class="page-title">
             <h1 class="nomargin">  News</h1>
         </div>
-        <!-- /page title -->                
+              
     </div>
-</div>
+</div> -->
 <!-- content -->
 <div class="main-content">
     <div class="row">
@@ -30,10 +30,8 @@
                 </article>
                 <?php } ?>
             </div>
-            <nav class="pagination"><span class="page-numbers current">1</span>
-                <a href="html" class="page-numbers">2</a>
-                <a href="#" class="page-numbers">3</a>
-                <a href="page2.html" class="next page-numbers"></a>
+            <nav class="pagination"><span class="page-numbers "></span>
+
             </nav>
         </div>
         <!-- /left blogs -->

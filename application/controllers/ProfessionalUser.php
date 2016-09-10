@@ -66,8 +66,8 @@ class ProfessionalUser extends CI_Controller {
                 'city' => $certificateData->city,
                 'location' => $this->input->post('location', true),
                 'imagePath' => $uploadPath . '/' . $file_name,
-                'latitude' => $this->input->post('latitude', true),
-                'longitude' => $this->input->post('longitude', true)s
+                'longitude' => $this->input->post('latitude', true),
+                'latitude' => $this->input->post('longitude', true)s
                 ); 
 
             $this->User->professionalUserSave( $data );

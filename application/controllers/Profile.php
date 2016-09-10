@@ -29,7 +29,7 @@ class Profile extends CI_Controller {
             if ( empty($data['user']) ) {
                 redirect('SearchProfessionalUser');
             }
-
+            //var_dump($data);
             $this->load->view('common/header');
             $this->load->view('Profile', array('data' => $data));
             $this->load->view('common/footer');

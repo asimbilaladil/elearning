@@ -20,9 +20,12 @@
              <li class="treeview">
                 <a href="<?php echo site_url('CreateQuiz'); ?>"><i class="fa fa-desktop"></i> <span>Create Quiz</span></a>                
             </li>        
-
-
-
+             <li class="treeview">
+                <a href="<?php echo site_url('Page'); ?>"><i class="fa fa-desktop"></i> <span>Edit Page</span></a>                
+            </li> 
+         <li class="treeview">
+                <a href="<?php echo site_url('Register/logout'); ?>"><i class="fa fa-desktop"></i> <span> Logout</span></a>                
+            </li>           
 
         </ul>
     </section>

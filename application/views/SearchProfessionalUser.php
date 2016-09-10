@@ -58,7 +58,7 @@
                                 <div class="ab-full-name-error ab-label-error ab-bold"></div>
                             </div>
                             <div class="ab-formGroup ab-left">
-                                <label class="ab-formLabel">Country</label>
+                                <label class="ab-formLabel">country</label>
                                 <div class="ab-formField" >
                                     <input type="text" id="country" maxlength="60" value="" class="ab-formElement ab-full-name">
                                 </div>
@@ -83,7 +83,7 @@
                     </button>
 
                 </div>
-
+                
                 <div class="table" id="searchTable">
                 </div>
             </div>

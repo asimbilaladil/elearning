@@ -7,14 +7,16 @@ class Congratulations extends CI_Controller {
 
         parent::__construct();
         $this->load->model('UserModel');
-        
+        $this->load->model('PageModel');
+
     }
 
     public function index() {   
             
+        $data["page"] = $this->PageModel->getPageById(5);
 
         $this->load->view('common/header');
-        $this->load->view('Congratulations', array('data' => null));
+        $this->load->view('Congratulations', array('data' => $data));
         $this->load->view('common/footer');            
 
     }

@@ -23,16 +23,18 @@ class PageModel extends CI_Model {
         $this->db->from( 'pages' );
         $quary_result=$this->db->get();
         $result = $quary_result->result();
+     
         return $result;         
     }
 
-    public function getBlogById($id) {
+    public function getPageById($id) {
 
         $this->db->select('*');
         $this->db->from('pages');
         $this->db->where('id', $id);
         $quary_result=$this->db->get();
         $result=$quary_result->result();
+
         return $result;
     }
     

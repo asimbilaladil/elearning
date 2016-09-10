@@ -8,6 +8,9 @@ class CreateBlog extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
+        if( !isset( $_SESSION['admin_id']) ){
+          redirect("Login/");
+        }
         $this->load->helper(array('form', 'url'));
         $this->load->model('BlogModel');
     }

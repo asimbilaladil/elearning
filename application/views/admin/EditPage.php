@@ -8,7 +8,7 @@
                     <small >Control panel</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Create Blog</a></li>
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Edit Page </a></li>
                     <li class="active">Dashboard</li>
                 </ol>
                 </br>
@@ -32,7 +32,7 @@
      									<div class="form-group">
     	                                    <label for="" class="col-sm-2 control-label">Content</label>
     	                                    <div class="col-sm-10">
-    	                                    	<textarea name="content" ></textarea>
+    	                                    	<textarea name="content" ><?php echo $data['pages'][0]->content; ?></textarea>
     	                                    </div>
                                     	</div>                                	
     								</div>
