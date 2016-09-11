@@ -1,14 +1,15 @@
-<div class="featured-content">
+<!--<div class="featured-content">
     <div class="substrate">
-        <img src="http://www.tdcsinstitute.com/wp-content/themes/academy/images/bgs/site_bg.jpg" class="fullwidth" alt="">          
+        <img src="http://il6.picdn.net/shutterstock/videos/9494555/thumb/1.jpg" class="fullwidth" alt="">          
+         
     </div>
     <div class="row">
         <div class="page-title">
             <h1 class="nomargin">  News</h1>
         </div>
-        <!-- /page title -->                
+               
     </div>
-</div>
+</div> -->
 <div class="main-content">
     <div class="row">
         <!-- left blogs -->
@@ -33,7 +34,7 @@
                 <div class="comments-listing" id="comments">
                     <ul>
                       
-
+              <?php foreach ($data['comments'] as $data) { ?>
                         <!-- #comment-## -->
                         <li id="comment-60429">
                             <div class="comment hidden-wrap">
@@ -44,33 +45,36 @@
                                 </div>
                                 <div class="comment-text">
                                     <header class="comment-header hidden-wrap">
-                                        <h5 class="left comment-author"><a href="#">tommy</a></h5>
-                                        <time class="comment-time left" datetime="2016-07-05">July 5, 2016</time>
+                                        <h5 class="left comment-author"><a href="#"><?php echo $data->username; ?></a></h5>
+                                        <time class="comment-time left" datetime="2016-07-05"><?php echo $data->date; ?></time>
                                              
                                     </header>
-                                    <p>Lean and cpmplete</p>
+                                    <p><?php echo $data->comment_text; ?></p>
                                 </div>
                             </div>
                         </li>
+                      <?php } ?>
                         <!-- #comment-## -->
                     </ul>
                 </div>
+              <?php if(isset($_SESSION['id']) ) { ?>
                 <div class="comment-form eightcol column last">
                     <div id="respond" class="comment-respond">
                         <h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/demo/academy/news/learn-basic-cooking-tips#respond" style="display:none;">Click here to cancel reply.</a></small></h3>
-                        <form action="#" method="post" id="" class="comment-form">
+                        <form action="<?php echo site_url('ViewNews/comment') ?>" method="post" id="" class="comment-form">
                             <div class="formatted-form">
                                 <div class="field-wrapper"><textarea id="comment" name="comment" cols="45" rows="8" placeholder="Comment"></textarea></div>
                             </div>
                             <p class="form-submit">
                                 <input name="submit" type="submit" id="" value="Add Comment">
-                                <input type="hidden" name="comment_post_ID" value="400" id="comment_post_ID">
-                                <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                <input type="hidden" name="blog_id" value="<?php echo $_GET['id']; ?>" id="comment_post_ID">
+
                             </p>
                         </form>
                     </div>
                     <!-- #respond -->
                 </div>
+              <?php } ?>
             </div>
         </div>
         <!-- /left blogs -->

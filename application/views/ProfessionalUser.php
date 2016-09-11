@@ -53,7 +53,7 @@
     </style>
 
 
-<div class="featured-content">
+<!-- <div class="featured-content">
     <div class="substrate">
         <img src="http://www.tdcsinstitute.com/wp-content/themes/academy/images/bgs/site_bg.jpg" class="fullwidth" alt="">          
     </div>
@@ -61,9 +61,9 @@
         <div class="page-title">
             <h1 class="nomargin"> Professional User Signup  </h1>
         </div>
-        <!-- /page title -->                
+           
     </div>
-</div>
+</div> -->
 <!-- content -->
 <div class="main-content">
     <div class="row">

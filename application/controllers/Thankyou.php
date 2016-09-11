@@ -11,7 +11,7 @@ class Thankyou extends CI_Controller {
     }
 
     public function index() {   
-            $item_number = $_GET['custom']; 
+  //          $item_number = $_GET['custom']; 
 
         if ( $this->input->get() ){
             $data = array(

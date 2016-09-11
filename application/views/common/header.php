@@ -69,9 +69,9 @@
     <div class="header-wrap">
       <header class="site-header">
         <div class="row">
-          <div class="site-logo left">
+          <div class="site-logo left logo-position">
             <a href="index.html" rel="home">
-            <img src="<?php echo base_url("assets/images/logo.png") ?>" alt="Academy – Learning Management Theme">                       </a>                    
+            <img class="logo-style" src="<?php echo base_url("assets/images/logo.png") ?>" alt="Academy – Learning Management Theme">                       </a>                    
           </div>
           <!-- /logo -->
           <div class="header-options right clearfix">
@@ -116,9 +116,9 @@
                 </li>
                 <li id="menu-item-238" class="menu-item menu-item-type-taxonomy menu-item-object-course_category menu-item-238"><a href="#">Career Centre</a></li>
                 <li id="menu-item-2114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2114"><a href="#">CPE Consultants</a></li>
-                <li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="News">CPE Issues</a></li>
-                <li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="#">About</a></li>
-                <li id="menu-item-603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-603"><a href="#">Support</a></li>
+                <li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="<?php echo site_url('News') ?>">CPE Issues</a></li>
+                <li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="<?php echo site_url('AboutUs') ?>">About</a></li>
+                <li id="menu-item-603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-603"><a href="<?php echo site_url('Support') ?>">Support</a></li>
               </ul>
             </div>
             <div class="select-menu">

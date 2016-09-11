@@ -6,6 +6,9 @@ class Page extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
+        if( !isset( $_SESSION['admin_id']) ){
+          redirect("Login/");
+        }      
         $this->load->model('PageModel');
     }
     
@@ -32,10 +35,11 @@ class Page extends CI_Controller {
     }
 
     public function EditPage() {
-
-        $data['pages'] = $this->PageModel->getPages();
-
-        $this->loadView('admin/EditPage', $data);
+        
+        $id = $this->input->get('page_id', true);      
+        $data['pages'] = $this->PageModel->getPageById( $id );
+  
+       $this->loadView('admin/EditPage', $data);
 
     }
 

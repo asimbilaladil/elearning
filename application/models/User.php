@@ -20,6 +20,16 @@ class User extends CI_Model {
         
         return $result;
     }
+      public function admin_login($userEmail, $password){
+        $this->db->select('*');
+        $this->db->from('admin');
+        $this->db->where('email', $userEmail);
+        $this->db->where('password', $password);
+        $quary_result=$this->db->get();
+        $result=$quary_result->row();
+        
+        return $result;
+    }
 
     public function checkIfUserExist($userEmail) {
 

@@ -354,6 +354,14 @@ textarea {
 .left {
     float:left;
 }
+.logo-position {
+	  margin-top: -14px;
+    margin-bottom: -10px;
+}
+.logo-style{
+		width:40%;
+		height:68px;
+}
 
 .right {
     float:right;
@@ -1808,7 +1816,7 @@ ul.success li {
 .featured-content {
 	position:relative;
 	overflow:hidden;
-	background:url(../images/bgs/site_bg.jpg);
+
 }
 
 .featured-content:after {
@@ -1838,6 +1846,7 @@ ul.success li {
 .main-content p {
 	color:#555;
 }
+
 
 .site-wrap {
 	position:relative;
